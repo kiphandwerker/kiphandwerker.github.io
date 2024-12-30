@@ -139,7 +139,7 @@ input, select, textarea {
 		radial-gradient(3px 3px at 350px 500px, #fff, transparent);
 		background-size: 650px 650px;
 	
-		animation: snowAnim 3s linear;
+		animation: snowAnim 1s linear;
 		animation-iteration-count: infinite;
 	}
 	.snow:after{
@@ -163,7 +163,7 @@ input, select, textarea {
 			transform: translateY(0);
 		}
 		to{
-			transform: translateY(50px);
+			transform: translateY(650px);
 		}
 	}
 
