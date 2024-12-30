@@ -108,64 +108,67 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
-		*,*:after,*:before{
+		*, *:after, *:before {
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			-ms-box-sizing: border-box;
 			box-sizing: border-box;
 		}
-		.snow_wrap{
+		
+		.snow_wrap {
 			background-size: cover;
 			background-position: center bottom;
 			position: relative;
 			overflow: hidden;
+			width: 100vw;
+			height: 100vh; /* Ensures it spans the full viewport height */
 		}
-		.snow,.snow:after, .snow:before{
+		
+		.snow, .snow:after, .snow:before {
 			content: "";
-			position:absolute;
-			top: -650px;
+			position: absolute;
+			top: -100%; /* Starts above the viewport */
 			left: 0;
 			right: 0;
 			bottom: 0;
-		background-image: 
-		radial-gradient(4px 4px at 100px 50px, #fff, transparent),
-		radial-gradient(6px 6px at 200px 150px, #fff, transparent),
-		radial-gradient(3px 3px at 300px 250px, #fff, transparent),
-		radial-gradient(4px 4px at 400px 350px, #fff, transparent),
-		radial-gradient(6px 6px at 500px 100px, #fff, transparent),
-		radial-gradient(3px 3px at 50px 200px, #fff, transparent),
-		radial-gradient(4px 4px at 150px 300px, #fff, transparent),
-		radial-gradient(6px 6px at 250px 400px, #fff, transparent),
-		radial-gradient(3px 3px at 350px 500px, #fff, transparent);
-		background-size: 650px 650px;
-	
-		animation: snowAnim 1s linear;
-		animation-iteration-count: infinite;
-	}
-	.snow:after{
-		margin: left -250;
-		opacity: 0.5;
-		filter: blur(2px);
-		animation-direction: reverse;
-		animation-duration: 6s;
-	}
-	
-	.snow:before{
-		margin: left -350px;
-		opacity: 0.7;
-		filter: blur(1px);
-		animation-direction: reverse;
-		animation-duration: 9s;
-	}
-	
-	@keyframes snowAnim{
-		from{
-			transform: translateY(0);
+			background-image: 
+				radial-gradient(4px 4px at 10vw 5vh, #fff, transparent),
+				radial-gradient(6px 6px at 20vw 15vh, #fff, transparent),
+				radial-gradient(3px 3px at 30vw 25vh, #fff, transparent),
+				radial-gradient(4px 4px at 40vw 35vh, #fff, transparent),
+				radial-gradient(6px 6px at 50vw 10vh, #fff, transparent),
+				radial-gradient(3px 3px at 5vw 20vh, #fff, transparent),
+				radial-gradient(4px 4px at 15vw 30vh, #fff, transparent),
+				radial-gradient(6px 6px at 25vw 40vh, #fff, transparent),
+				radial-gradient(3px 3px at 35vw 50vh, #fff, transparent);
+			background-size: 100vw 100vh;
+			animation: snowAnim 10s linear infinite;
 		}
-		to{
-			transform: translateY(650px);
+		
+		.snow:after {
+			transform: translateX(-20vw); /* Shift for layering */
+			opacity: 0.5;
+			filter: blur(2px);
+			animation-direction: reverse;
+			animation-duration: 15s; /* Slower for variation */
 		}
-	}
+		
+		.snow:before {
+			transform: translateX(-35vw); /* Shift for layering */
+			opacity: 0.7;
+			filter: blur(1px);
+			animation-direction: reverse;
+			animation-duration: 18s; /* Slower for variation */
+		}
+		
+		@keyframes snowAnim {
+			from {
+				transform: translateY(0);
+			}
+			to {
+				transform: translateY(100vh); /* Spans entire viewport height */
+			}
+		}
 
 /* Type */
 
