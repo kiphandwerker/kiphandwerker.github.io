@@ -4,7 +4,7 @@
 https://kiphandwerker.github.io/
 
 
-![Front Page](images/Frontpage.png)
+![Front Page](images/FrontPage.png)
 
 ## Employement
 - Senior Database Analyst
