@@ -1,3 +1,6 @@
-Web portfolio! I hope you enjoy it!
+# Web portfolio! I hope you enjoy it!
+## Location
+https://kiphandwerker.github.io/
 
-If there are any issues with it, please let me know.
+![](images/Frontpage.png)
+
